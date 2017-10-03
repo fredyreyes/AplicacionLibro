@@ -5,6 +5,7 @@ import android.os.Bundle;
 //TE AMO JOHAN!!
 public class MainActivity extends AppCompatActivity {
 //Johann Polania Gonzalez
+    //SI FUNCIONO
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
