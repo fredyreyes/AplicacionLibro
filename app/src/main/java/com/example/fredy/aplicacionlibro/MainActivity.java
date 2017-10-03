@@ -8,8 +8,8 @@ public class MainActivity extends AppCompatActivity {
 //Johann Polania Gonzalez
     //SI FUNCIONO
     //otro cambio
-   //CAMBIANDO LO QUE HIZO FREDY
-//CAMBIANDO LO QUE HIZO JOHAN
+   //CAMBIANDO LO QUE HIZO JOHAN
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
