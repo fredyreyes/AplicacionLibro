@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fredy.aplicacionlibro.Auto3Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textAuthorName3"
+            android:layout_width="328dp"
+            android:layout_height="58dp"
+            android:text="Eduardo Galeano"
+            android:textSize="30sp"
+            android:layout_weight="0.06" />
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:src="@drawable/eduardogaleano"
+            android:layout_gravity="center"
+            android:layout_height="100dp"
+            android:layout_width="203dp"
+            android:layout_weight="0.48" />
+
+        <TextView
+            android:id="@+id/textDescription2"
+            android:layout_width="328dp"
+            android:layout_height="58dp"
+            android:text="¡Cortáme las venas Pibe!"
+            android:textSize="30sp"
+            android:layout_weight="0.06" />
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
