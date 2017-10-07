@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 //TE AMO JOHAN!!
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
      * The pager adapter, which provides the pages to the view pager widget.
      */
     MyFragmentPagerAdapter pagerAdapter;
-
+    Button buttonShare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
        this.pager = (ViewPager) this.findViewById(R.id.pager);
+      buttonShare=(Button)findViewById(R.id.buttonShare);
 
         // Create an adapter with the fragments we show on the ViewPager
      MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(
@@ -42,8 +45,23 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(Autor1Fragment.newInstance("FREDY REYES","XXX","IMAGEN4",5));
 
        this.pager.setAdapter(adapter);
-
+       // buttonShare.setOnClickListener(this);
 
 
     }
+
+
+
+    public void ShowCurrentItem(View v){
+
+        Context context = getApplicationContext();
+        CharSequence text = "Hello toast!";
+        int duration = Toast.LENGTH_SHORT;
+        int currentItem=pager.getCurrentItem();
+        Toast toast = Toast.makeText(context,String.valueOf(currentItem), duration);
+        toast.show();
+
+
+    }
+
 }
