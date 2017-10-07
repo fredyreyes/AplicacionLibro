@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Autores">
+        <item>Adriana</item>
+        <item>Alexander</item>
+        <item>Brenda</item>
+        <item>Camilo</item>
+        <item>Débora</item>
+        <item>Fernando</item>
+        <item>Santiago</item>
+        <item>Jeni</item>
+        <item>Jorge</item>
+        <item>Jorge Luis</item>
+        <item>Lair</item>
+        <item>Mafe</item>
+        <item>Martha</item>
+        <item>Miguel</item>
+        <item>Paola</item>
+        <item>Salvatore</item>
+        <item>Sami</item>
+        <item>Joango</item>
+        <item>Zulay</item>
+
+    </string-array>
+
+
+
+
+
+
+
+</resources>
