@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fondoApp"
     android:background="@drawable/fondoapp"
     tools:context="com.example.fredy.aplicacionlibro.Autor1Fragment">
 
@@ -16,6 +17,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:weightSum="1">
+
+
+
 
         <TextView
             android:id="@+id/textAuthorName"
@@ -31,6 +35,7 @@
             android:layout_width="270dp"
             android:layout_height="130dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/cloud"
             android:paddingBottom="10dp"
             android:paddingLeft="25dp"
@@ -39,21 +44,8 @@
             android:text="!Qué buen porro!"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textIndex"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_weight="0.06"
-            android:text="1"
-            android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/buttonShare"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="Share"
-            android:onClick="ShowCurrentItem"
-            android:layout_weight="0.06" />
+
 
 
     </LinearLayout>

@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<string-array name="ImagesAutores">
+    <item>@drawable/adriana</item>
+    <item>@drawable/alexander</item>
+    <item>@drawable/brenda</item>
+    <item>@drawable/camilo</item>
+    <item>@drawable/debora</item>
+    <item>@drawable/fernando</item>
+    <item>@drawable/santiago</item>
+
+
+</string-array>
+
+
 
     <string-array name="Autores">
 

@@ -2,23 +2,19 @@
 package com.example.fredy.aplicacionlibro;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link Autor1Fragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Autor1Fragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class Autor1Fragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -81,11 +77,51 @@ public class Autor1Fragment extends Fragment {
         toast.show();
 */
 
-        TextView tvIndex = (TextView) rootView.findViewById(R.id.textIndex);
+        //TextView tvIndex = (TextView) rootView.findViewById(R.id.textIndex);
         TextView tvAutor = (TextView) rootView.findViewById(R.id.textAuthorName);
         TextView tvDescripcion = (TextView) rootView.findViewById(R.id.textDescription);
+        FrameLayout frameLayout=(FrameLayout)rootView.findViewById(R.id.fondoApp);
 
-        tvIndex.setText(String.valueOf(this.index));
+
+        switch (this.nombreAutor){
+
+            case "Adriana":
+                frameLayout.setBackgroundResource(R.drawable.adriana);
+                break;
+            case "Alexander":
+                frameLayout.setBackgroundResource(R.drawable.alexander);
+                break;
+
+            case "Brenda":
+                frameLayout.setBackgroundResource(R.drawable.brenda);
+                break;
+
+            case "Camilo":
+                frameLayout.setBackgroundResource(R.drawable.camilo);
+                break;
+
+
+            case "Débora":
+                frameLayout.setBackgroundResource(R.drawable.debora);
+                break;
+
+
+            case "Fernando":
+                frameLayout.setBackgroundResource(R.drawable.fernando);
+                break;
+
+
+            case "Santiago":
+                frameLayout.setBackgroundResource(R.drawable.santiago);
+                break;
+
+
+
+        }
+
+
+
+        //tvIndex.setText(String.valueOf(this.index));
         tvDescripcion.setText(String.valueOf(this.textoAutor));
         tvAutor.setText(String.valueOf(this.nombreAutor));
 

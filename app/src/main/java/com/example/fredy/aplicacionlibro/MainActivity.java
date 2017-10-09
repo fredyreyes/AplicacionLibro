@@ -37,24 +37,25 @@ public class MainActivity extends AppCompatActivity {
         Resources res = getResources();
         String[] autores = res.getStringArray(R.array.Autores);
         String[]  textoAutores = res.getStringArray(R.array.textoAutores);
-
+        String [] listaImagenesAutores=res.getStringArray(R.array.ImagesAutores);
 
        this.pager = (ViewPager) this.findViewById(R.id.pager);
-        buttonShare=(Button)findViewById(R.id.buttonShare);
-        Toolbar toolbar=(Toolbar)(findViewById(R.id.toolbarBooks));
-        setSupportActionBar(toolbar);
+       // buttonShare=(Button)findViewById(R.id.buttonShare);
+        //Toolbar toolbar=(Toolbar)(findViewById(R.id.toolbarBooks));
+        //toolbar.setTitle("");
+        //setSupportActionBar(toolbar);
 
 
 
         // Create an adapter with the fragments we show on the ViewPager
      MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(Autor1Fragment.newInstance(autores[0],textoAutores[0],"",1));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[1],textoAutores[1],"",2));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[2],textoAutores[2],"",3));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[3],textoAutores[3],"",4));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[4],textoAutores[4],"",5));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[5],textoAutores[5],"",6));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[0],textoAutores[0],listaImagenesAutores[0],1));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[1],textoAutores[1],listaImagenesAutores[1],2));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[2],textoAutores[2],listaImagenesAutores[2],3));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[3],textoAutores[3],listaImagenesAutores[3],4));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[4],textoAutores[4],listaImagenesAutores[4],5));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[5],textoAutores[5],listaImagenesAutores[5],6));
 
 
        this.pager.setAdapter(adapter);
