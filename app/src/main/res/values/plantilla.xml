@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="Autores">
+
         <item>Adriana</item>
         <item>Alexander</item>
         <item>Brenda</item>
@@ -21,11 +22,7 @@
         <item>Sami</item>
         <item>Joango</item>
         <item>Zulay</item>
-
-    </string-array>
-
-    <string-array name="textoAutores">
-        <item>"Te llamo más tarde\nIntento salir del laberinto de tu amor" </item>
+        <item>Adriana</item>
         <item>Alexander</item>
         <item>Brenda</item>
         <item>Camilo</item>
@@ -44,6 +41,276 @@
         <item>Sami</item>
         <item>Joango</item>
         <item>Zulay</item>
+        <item>Adriana</item>
+        <item>Alexander</item>
+        <item>Brenda</item>
+        <item>Camilo</item>
+        <item>Débora</item>
+        <item>Fernando</item>
+        <item>Santiago</item>
+        <item>Jeni</item>
+        <item>Jorge</item>
+        <item>Jorge Luis</item>
+        <item>Lair</item>
+        <item>Mafe</item>
+        <item>Martha</item>
+        <item>Miguel</item>
+        <item>Paola</item>
+        <item>Salvatore</item>
+        <item>Sami</item>
+        <item>Joango</item>
+        <item>Zulay</item>
+        <item>Jorge Luis</item>
+        <item>Lair</item>
+        <item>Mafe</item>
+        <item>Martha</item>
+        <item>Miguel</item>
+        <item>Paola</item>
+        <item>Salvatore</item>
+        <item>Sami</item>
+        <item>Joango</item>
+        <item>Brenda</item>
+        <item>Santiago</item>
+        <item>Salvatore</item>
+        <item>Débora</item>
+        <item>Martha Ortiz</item>
+        <item>Adriana</item>
+        <item>Jorge Luis</item>
+        <item>Lair</item>
+        <item>Zulay</item>
+        <item>Fernando</item>
+        <item>Sandra Milena</item>
+        <item>Miguel</item>
+        <item>Yuango</item>
+        <item>Mafe</item>
+        <item>Martha Ortiz</item>
+        <item>Sandra Milena</item>
+        <item>Jorge</item>
+        <item>Yuango</item>
+        <item>Sandra Milena</item>
+        <item>Salvatore</item>
+        <item>Martha Ortiz</item>
+        <item>Jorge Luis</item>
+        <item>Miguel</item>
+        <item>Lair</item>
+        <item>Sandra Milena</item>
+        <item>Jorge</item>
+        <item>Santiago</item>
+        <item>Jorge</item>
+        <item>Alexander</item>
+        <item>Salvatore</item>
+        <item>Débora</item>
+        <item>Brenda</item>
+        <item>Fernando</item>
+        <item>Yuango</item>
+        <item>Sandra Milena</item>
+        <item>Yuango</item>
+        <item>Jorge</item>
+        <item>Sandra Milena</item>
+        <item>Zulay</item>
+        <item>Jorge Luis</item>
+        <item>Adriana</item>
+        <item>Martha Ortiz</item>
+        <item>Yuango</item>
+        <item>Jorge</item>
+        <item>Santiago</item>
+        <item>Yuango</item>
+        <item>Camilo</item>
+        <item>Sandra Milena</item>
+        <item>Mafe</item>
+        <item>Jorge</item>
+        <item>Jenni</item>
+        <item>Salvatore</item>
+        <item>Fernando</item>
+        <item>Lair</item>
+        <item>Débora</item>
+        <item>Jorge Luis</item>
+        <item>Santiago</item>
+        <item>Mafe</item>
+        <item>Jorge</item>
+        <item>Alexander</item>
+        <item>Santiago </item>
+        <item>Yuango</item>
+        <item>Jorge</item>
+        <item>Alexander</item>
+        <item>Adriana</item>
+        <item>Camilo</item>
+        <item>Santiago</item>
+        <item>Alexander</item>
+        <item>Camilo</item>
+        <item>Santiago</item>
+        <item>Jorge</item>
+        <item>Alexander</item>
+        <item>Santiago</item>
+        <item>Jorge Luis</item>
+        <item>Sandra Milena</item>
+        <item>Jorge</item>
+        <item>Yuango</item>
+
+
+
+
+    </string-array>
+
+    <string-array name="textoAutores">
+        <item>"Te llamo más tarde \nIntento salir del  laberinto de tu amor" </item>                     <!-- 0-->
+        <item>Tus ojos me embrujaron\nVeámonos de nuevo\nAgranda el maleficio</item>                    <!-- 1-->
+        <item>Te espero,\n
+        La espuma de la cerveza se deshace en mi boca, como mis ilusiones en los recuerdos </item><!-- 2-->
+        <item>Miles de gotas esperan tu luz para hacer un arcoíris</item><!-- 3-->
+        <item>¡Ohh!\nY ahora -de tu belleza-,\n ¿Quién podrá defenderme? </item><!-- 4-->
+        <item>Ya empecé,\n Estoy aquí con la luna y las\n estrellas\n
+            Solo faltas tú </item><!-- 5-->
+        <item>Me enredas los sueños, tus\n aves cantan en mi paraíso </item><!-- 6-->
+        <item>No soporto estos sabores amargos en mi boca\n
+            Devuélveme el gusto</item><!-- 7-->
+        <item>Entra, ponte cómoda.\n
+            Mi desamor te atenderá en un minuto.</item><!-- 8-->
+        <item> Entra, ponte cómoda.\n Mi desamor te atenderá en un minuto.</item><!-- 9-->
+        <item>Antes de conocerte,\n era invisible sin tu mirada\n
+            mi pupila desnuda,\nllenaste.</item><!-- 10-->
+        <item>Danza amor mío\nEntrégate al delirio\n Y ámame aún entre sombras.</item><!-- 11-->
+        <item>Me quedaría contigo sin darme cuenta\n de las horas, dibujando\n en tu pecho miles de arcoíris.</item><!-- 12-->
+        <item>Ya no me cabe tanta ausencia en el cuerpo, tanta voz sin oírse, tantos ojos sin besos, tanto sin ti. </item><!-- 13-->
+        <item>Encarna a esta pasión, incendia la espesura de mis demonios, llévame a casa, y calienta mi cama.</item><!-- 14-->
+        <item>No controlo esta adicción Necesito una sobredosis de tus besos</item><!-- 15-->
+        <item>El alza de la gasolina me distancia de ti, aún así eres el motor de mi vida</item><!-- 16-->
+        <item>Arriesguémonos\n Que el amor pese en nuestros actos como toneladas de algodón</item><!-- 17-->
+        <item>Llámame. \n
+        Hagamos futuro con palabras de colores simples</item><!-- 18-->
+        <item>Un beso es necesario para que aún en un diminuto suspiro mis miedos duerman en la hamaca que se extiende en tus labios</item><!-- 19-->
+        <item>Tengo que despedirme, pero supongo que te veré en el paraíso</item><!-- 20-->
+        <item>Cuando pase el tiempo y las nubes se hayan diluido y no den movilidad al cielo, correrán los relojes entre tu cielo y el mío. </item><!-- 21-->
+        <item>Soy vegetariano. Gracias por tu ofrecimiento.</item><!-- 22-->
+        <item>¿Te despediste? no recuerdo tu beso al final, \n
+            ¿Será que cada vez necesito más?</item><!-- 23-->
+        <item>Entre tú y yo hay un abismo,húndete en él,y que caigan las rocas agitadas.</item><!-- 24-->
+        <item>Las hormigas recorren tu cuerpo son mis manos,tu piel azucarada, el paraíso.</item><!-- 25-->
+        <item>Como sumergido en chile está mi corazón, lleno de cortes, pinchado, ardiendo a borbotones, cocinándose para tus dientes.</item><!-- 26-->
+        <item>Trepo sobre cada gota de lluvia para llegar a ti, mi cielo</item><!-- 27-->
+        <item>Aunque no esté ahí, sabes que estoy contigo</item><!-- 28-->
+        <item>Corrección: Veámonos a la entrada de tu corazón</item><!-- 29-->
+        <item>No busques en otros labios, los besos que solo yo te puedo dar</item><!-- 30-->
+        <item>Te escribo estas palabras en texto predictivo para no cansarme intentando hacerte saber que me estoy muriendo por ti</item><!-- 31-->
+        <item>¡Llegaré 10 min tarde! Aún no logro salir del tráfico de tu lujuria </item><!-- 32-->
+        <item>No me dejes, que quiero morir un poquito de más.</item><!-- 33-->
+        <item>Ven, la noche está fría, apriétame a tu pecho, dime cosas bonitas, que sin cuentos no puedo dormir.</item><!-- 34-->
+        <item>Canta la tristeza y se percibe dolor entre tus y mis flores,magnolias y nomeolvides</item><!-- 35-->
+        <item>No cierres aún tus ojos, no apagues la noche repentinamente.</item><!-- 36-->
+        <item>¡Voy tarde! Apenas me estoy bajando de la nube donde me dejaste </item><!-- 37-->
+        <item>Aterrizar en sus pies para recorrerla toda, explorar sus paisajes con días y noches totalmente extasiantes</item><!-- 38-->
+        <item>Mi corazón en cautiverio me exige canje de sentimientos contigo</item><!-- 39-->
+        <item>Me embriagué pensando en ti No llegaste\n Ahora veo dos lunas\n Creo que voy a amanecer en otro planeta </item><!-- 40-->
+        <item>Es inadmisible que acabe el licor, excepto si regresan tus besos a mi mesa</item><!-- 41-->
+        <item>Es hora de que hablemos\n Ya no te quiero más… Empiezo a amarte</item><!-- 42-->
+        <item>La luna se esconde entre nubes Y tú ¿Dónde estás?</item><!-- 43-->
+        <item>Nos vemos en la tarde, el horizonte será tu rostro</item><!-- 44-->
+        <item>Sencillamente eres mi mundo, Cada camino siempre conduce a ti</item><!-- 45-->
+        <item>El licor que de verdad me embriaga se fermenta en el alambique de tus labios</item><!-- 46-->
+        <item>Espero en una noche estrellada a mi luna ¿Ya vienes? Luis</item><!-- 47-->
+        <item>Tu llegada aún es una hipótesis</item><!-- 48-->
+        <item>Me he vuelto adicto a ti,\nA esnifar tus respiros,\nA beberme tu soberbia,\n
+            A sentir tu desprecios.</item><!-- 49-->
+        <item>Amor es sacarte el corazón y echarlo al comal aderezándolo con chile y palabras, servirlo caliente y dejarte comer. </item><!-- 50-->
+        <item>Cuando mi mundo se vuelva un desastre\n ¿Podrás apagar todo el ruido?</item><!-- 51-->
+        <item>Mis labios me pesan, sobrecarga de besos,\n ¿Me ayudas?</item><!-- 52-->
+        <item>Gritaré suavemente que quiero toda tu poesía en mí,Y yo feliz y satisfecha daré a luz una nube.</item><!-- 53-->
+        <item>Entre tu cuerpo y el míoSobre la luna\n
+            Hasta que amanezca</item><!-- 54-->
+        <item>Yo, solo seré la que de verdad amó, la que vivió momentos inesperados.\n
+            Una B que se detuvo frente a tus ojos, cansados de caminar por jardines podados</item><!-- 55-->
+        <item>Entre el espacio que hay de tus ojos a mis labios solo existe un obstáculo…\n
+            El paraíso.</item><!-- 56-->
+        <item>¡Voy llegando! Ya siento tus curvas dando vueltas dentro de mí</item> <!-- 57-->
+        <item>Cuando creí que todo se había ido llega la noche, con una nueva luna para los dos </item> <!-- 58-->
+        <item>La batería de cariños y afectos se está agotando, conectar a una fuente de besos pronto.</item><!-- 59-->
+        <item>Por ti supe de la neurosis, de los terrones de nada vertiéndose en un café interminable de deseo y búsqueda.</item><!-- 60-->
+        <item>En la mañana,\ntu mirada se adueña de mis ojos.\n En la tarde se adueña de mis pies.\nEn la noche no se adueña de nada.</item><!-- 61-->
+        <item>Sumérgete en mi cuerpo y acomódate en el caos que más te plazca mientras amaina la lluvia. </item><!-- 62-->
+        <item>Eres el hediondo aliento de la vida.</item><!-- 63-->
+        <item>Te veo en la 8va estrella al noreste de tu ventana</item><!-- 64-->
+        <item>Tocaré la guitarra en tu cuerpo, te pintaré un corazón y te besaré los pulmones </item><!-- 65-->
+        <item>El uno sin el otro, da cero, al menos en mi cuenta. </item><!-- 66-->
+        <item>Se nos escapa el atardecer, vuélvete mi ocaso</item><!-- 67-->
+        <item>40° centígrados no son nada\nSi no estás</item><!-- 68-->
+        <item>Es tu sabor a recuerdo lo que me impulsa a buscarte en los silencios</item><!-- 69-->
+        <item>¿Dónde estarás mañana?\nCuando las margaritas del jardín llamen a los pájaros negros de verano.</item>
+        <item>Muchas velas alrededor y nuestros cuerpos en medio como una sola llama</item>
+        <item>Tarda la vida entera, cruza el umbral de tus impronunciables deseos.\n Yo te esperaré hasta que regreses.</item>
+        <item>Hoy sólo soy llanto, ni suspiros, ni quejas, sólo agua que ya no cabe, sólo río que no tiene mar.</item>
+        <item>Salgo como caballo desbocado en busca de ese ángel anidado en tu pecho. </item>
+        <item>Ya no hay certezas, por ejemplo, yo mientras me voy yendo me estoy viniendo, mientras me voy yendo de ti, me estoy viniendo hacia mí.</item>
+        <item>Reconocer al otro es una obligación ontológica, reconocer que ese otro no es cualquier otro,¡Es pensar en ti!</item>
+        <item>Mal te quiero, para no olvidar el sol que me toca; Mal te quiero, para seguir caminandoen la tranquilidad conseguida;Mal te quiero hasta que dejesde esperarme tanto.</item>
+        <item>Desgarra mi piel y poco a poco ve consumiendo el elixir de mi alma.</item>
+        <item>Alta temperatura embruja tu cuerpo, diosa amorosa de brazos gentiles, moja mi lengua con tus sudores.</item>
+        <item>Te espero debajo de las sábanas mientras llegas</item>
+        <item>Atravesar tu mirada Más allá de los deseos Y abrazarte en la noche Dejándote besos Sobre tu piel onírica</item>
+        <item>A tu lado soy una ladrona de sonrisas</item>
+        <item>Te espero en el inicio de mi arco iris, viajaremos por sus colores</item>
+        <item>La agonía de vivir no quiere liberar a este pájaro herido, que ya no quiere volar.</item>
+        <item>En tus ojos profundos sumerjo mi éxtasis de amor</item>
+        <item>Antes de llegar al cielo Veámonos con los ángeles en el bar</item>
+        <item>Con tu sonrisa de cristal cortas mis prejuicios, Aumentas mi ansiedad Volviéndome adicta a ti</item>
+        <item>Ven esta noche…  Danza en mi piel con tu sombra </item>
+        <item>Escóndete en los resquicios de esta plácida existencia y embriágala con tu angustia.\n Sin darme cuenta, te volviste necesaria. </item>
+        <item>En tus ojos hay un bosque atravesado por un río, cantan los grillos.</item>
+        <item>Discúlpame por escribirte, mándame los pedacitos de corazón que deje saliendo de tu casa.</item>
+        <item>La noche fantástica se entrega lúgubre a mis deseos Sorteando tu cuerpo ante la desdicha \nAmándote entre ruinas y miserias</item>
+        <item>Te he querido, Te he esperado sin buscarlo, Serás un mal querido, ¡No te querré más! </item>
+        <item>Desbórdame de pasión y locura, Inunda mis valles </item>
+        <item>Estoy aquí impaciente Frente a un jardín que será bello cuando llegues </item>
+        <item>Revoloteas en mis pensamientos como una bandada de pájaros mañaneros</item>
+        <item>De nuevo las nubes te dibujan ¿a qué hora me empaparé de ti?</item>
+        <item>Llámame más tarde,\nAhora estoy en reunión con mi soledad, ordenando las palabras de mi corazón</item>
+        <item>Maltrátame con un suspiro, azótame con un beso, castígame con tu remanso. </item>
+        <item>Tu voz da vida, tu murmullo aquieta huracanes, tu grito rompe límites cósmicos, tu risa guía las estrellas. ¡Nómbrame!</item>
+        <item>Hay morenas rubias y mulatas. Labios distintos, labios entreabiertos que dictan Tócame-tómame y al tocarlas desaparecen… LAS: _ER_EZAS.  </item>
+        <item>Luz azul que emana de su cabello, eriza esta sangre, detona el deseo, en un halo de vida.</item>
+        <item>Utilizo mi pulgar disfrazando palabras para decirte ¡Te quiero!</item>
+        <item>Aunque hago parte de tu teatro\n No encuentro tu máscara Sólo quiero ver más allá de ti</item>
+        <item>Seamos imperfectos pero sigamos soñando el amor</item>
+        <item>Desde que te vi estoy ebrio y no he tomado nada</item>
+        <item>Si quieres vete lejos Pero déjame tu aroma </item>
+        <item>¿Qué pasa? ¿Quieres otro paseo infernal directo al cielo?</item>
+        <item>Pronostican lluvias con relámpagos para hoy, y en la noche tormentas de besos y caricias. \nTe espero a cenar.</item>
+        <item>Me queda el sabor amargo de este trago, el reloj que pasa y no sabe si va o viene </item>
+        <item>Amor en tres tiempos; la noche, la luna y tú. </item>
+        <item>Purifiquemos nuestras almas con vino Veámonos en el bar de siempre </item>
+        <item>Te esperé 1 hora y no soporté la tentación de hacer la digestión con lo que pedí para los dos</item>
+        <item>Duerme conmigo. Cazaremos estrellas toda la noche</item>
+        <item>Juguemos… Aunque ya presiento un jaque mate a mi corazón </item>
+        <item>No fue sino percibir tu aroma Para endulzar mi despertar</item>
+        <item>Ansioso y ardiente Así es mi amor por ti, Calma mi sed </item>
+        <item>Atravieso el cerco que me han puesto tus ojos ¿He llegado a tu mente?</item>
+        <item>Mojado, Busco tu risa debajo del paraguas</item>
+        <item>Como un buen zapato en un buen pie, ¡ni la PECUECA podrá separarnos! </item>
+        <item>Al final de mi tímpano medio, justo ahí, habita lo que nunca te dije. </item>
+        <item>La perfecta circunferencia de tus ojos cuando se llenan de lujuria y se clavan en mí, convirtiéndonos en uno.</item>
+        <item>Mal querido fuiste Mal querida fui No nos mal queramos los dos. </item>
+        <item>¿Callas? Como siempre te vendas la boca y me vendes las dudas.</item>
+        <item>¿No será mucha molestia tomar conmigo una tacita de café? \nEs que tengo muchas ganas de hablar y disfrutar la vida con usted. </item>
+        <item>Soy un fugitivo del tiempo Me volé para contemplar tus ojos infinitos </item>
+        <item>Te espero…  Mis piernas son la pista de aterrizaje de tu cuerpo </item>
+        <item>Demórate más, Voy a contaminarme de estrellas </item>
+        <item>Vos y yo Adictos al dolor Sabemos hacernos falta </item>
+        <item>Despierto entre tus pétalos y me embriago con tu rocío </item>
+        <item>Desde que te besé Me sumergí en las oscuras Aguas del deseo </item>
+        <item>Va a empezar la película La protagonista no ha llegado ¿Espero? </item>
+        <item>Así es el espacio\n En mi cielo llueve,\n En el tuyo brilla el sol\n Mi corazón se ensancha para amarte\n El tuyo se estrecha para olvidarme</item>
+        <item>Voy a sacarte de encima hasta la última gota de poesía que llevas</item>
+        <item>En tus ojos hace un guiño el sol, En mis labios bosteza la luna \nEs propicio nuestro encuentro </item>
+        <item>Me das un clic y enciendo mi deseo</item>
+        <item>Me uno a las aves\n Y le canto al nuevo día Que brilla en tus ojos</item>
+        <item>Mis difuminados colores Encontraron de nuevo combinación Cuando brilló el tono de tu voz</item>
+        <item>Apúrate, es hora de ver juntos el amanecer del amor</item>
+        <item>Si llegas Quédate con las estrellas, Si no me encuentras Es que me fui con la luna </item>
+        <item>No te preocupes, no vuelvas \nPescaré nuestros recuerdos para colgarlos en los percheros del olvido</item>
+        <item>Guardo el reflejo de tus ojos de luna en mi mesa de noche </item>
+        <item>Unos dicen que eres noche cautiva, otros atardecer pasión, yo sólo sé cosita linda que por ti toditos los días hinchado está mi corazón.</item>
+        <item>Encenderás pólvora en mi pecho, Presenciarás un espectáculo de luces </item>
+        <item>Reduce las posibilidades de comunicarnos Llámame Agranda el cielo </item>
+        <item>¿Y si exploráramos las estrellas de tu cuerpo?</item>
 
     </string-array>
 

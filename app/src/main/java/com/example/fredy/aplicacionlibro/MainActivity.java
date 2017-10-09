@@ -45,13 +45,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Create an adapter with the fragments we show on the ViewPager
-     MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(
-                getSupportFragmentManager());
-       adapter.addFragment(Autor1Fragment.newInstance(autores[0],textoAutores[0],"IMAGEN_1",1));
-       adapter.addFragment(Autor1Fragment.newInstance("JULIO CORTAZAR","RAYUELA","IMAGEN_1",2));
-        adapter.addFragment(Autor1Fragment.newInstance("GABRIEL GARCÍA MARQUEZ","CIEN AÑOS DE SOLEDAD","IMAGEN_1",3));
-        adapter.addFragment(Autor1Fragment.newInstance("JOSE ASUNCIÓN SILVA","De sobremesa","IMAGEN3",4));
-        adapter.addFragment(Autor1Fragment.newInstance("FREDY REYES","XXX","IMAGEN4",5));
+     MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
+
+        adapter.addFragment(Autor1Fragment.newInstance(autores[0],textoAutores[0],"",1));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[1],textoAutores[1],"",2));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[2],textoAutores[2],"",3));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[3],textoAutores[3],"",4));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[4],textoAutores[4],"",5));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[5],textoAutores[5],"",6));
+
 
        this.pager.setAdapter(adapter);
        // buttonShare.setOnClickListener(this);
