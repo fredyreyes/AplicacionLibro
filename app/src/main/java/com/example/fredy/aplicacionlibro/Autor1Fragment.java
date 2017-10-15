@@ -1,9 +1,6 @@
 
 package com.example.fredy.aplicacionlibro;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -121,6 +117,8 @@ public class Autor1Fragment extends Fragment {
 
 
 
+
+
         //tvIndex.setText(String.valueOf(this.index));
         tvDescripcion.setText(String.valueOf(this.textoAutor));
         tvAutor.setText(String.valueOf(this.nombreAutor));
@@ -129,5 +127,6 @@ public class Autor1Fragment extends Fragment {
         return rootView;
 
     }
+
 
 }

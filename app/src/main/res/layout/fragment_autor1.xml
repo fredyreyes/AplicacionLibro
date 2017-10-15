@@ -47,6 +47,7 @@
                 android:id="@+id/btCompartir"
                 android:layout_width="wrap_content"
                 android:layout_height="140sp"
+                android:onClick="Compartir"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Button" />
