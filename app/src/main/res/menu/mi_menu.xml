@@ -3,12 +3,17 @@
     <item
         android:id="@+id/uno"
 
-        android:title="mi Item"
+        android:title="Compartir Lección"
          />
 
     <item
         android:id="@+id/dos"
 
-        android:title="mi Item2"
+        android:title="Compartir Tarjeta"
          />
+    <item
+        android:id="@+id/tres"
+
+        android:title="Añadir Favoritos"
+        />
 </menu>

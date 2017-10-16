@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.ActionMode;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     ViewPager pager = null;
     Button popup_but;
-
+    MenuItem item;
     /**
      * The pager adapter, which provides the pages to the view pager widget.
      */
@@ -37,38 +38,32 @@ public class MainActivity extends AppCompatActivity {
 
         Resources res = getResources();
         String[] autores = res.getStringArray(R.array.Autores);
-        String[]  textoAutores = res.getStringArray(R.array.textoAutores);
-        String [] listaImagenesAutores=res.getStringArray(R.array.ImagesAutores);
-        popup_but= (Button) findViewById(R.id.btCompartir);
+        String[] textoAutores = res.getStringArray(R.array.textoAutores);
+        String[] listaImagenesAutores = res.getStringArray(R.array.ImagesAutores);
+        popup_but = (Button) findViewById(R.id.btCompartir);
 
 
-       this.pager = (ViewPager) this.findViewById(R.id.pager);
-       // buttonShare=(Button)findViewById(R.id.buttonShare);
+        this.pager = (ViewPager) this.findViewById(R.id.pager);
+        // buttonShare=(Button)findViewById(R.id.buttonShare);
         //Toolbar toolbar=(Toolbar)(findViewById(R.id.toolbarBooks));
         //toolbar.setTitle("");
         //setSupportActionBar(toolbar);
 
 
-
         // Create an adapter with the fragments we show on the ViewPager
-     MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
+        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(Autor1Fragment.newInstance(autores[0],textoAutores[0],listaImagenesAutores[0],1));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[1],textoAutores[1],listaImagenesAutores[1],2));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[2],textoAutores[2],listaImagenesAutores[2],3));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[3],textoAutores[3],listaImagenesAutores[3],4));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[4],textoAutores[4],listaImagenesAutores[4],5));
-        adapter.addFragment(Autor1Fragment.newInstance(autores[5],textoAutores[5],listaImagenesAutores[5],6));
-
-
-       this.pager.setAdapter(adapter);
-       // buttonShare.setOnClickListener(this);
+        adapter.addFragment(Autor1Fragment.newInstance(autores[0], textoAutores[0], listaImagenesAutores[0], 1));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[1], textoAutores[1], listaImagenesAutores[1], 2));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[2], textoAutores[2], listaImagenesAutores[2], 3));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[3], textoAutores[3], listaImagenesAutores[3], 4));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[4], textoAutores[4], listaImagenesAutores[4], 5));
+        adapter.addFragment(Autor1Fragment.newInstance(autores[5], textoAutores[5], listaImagenesAutores[5], 6));
 
 
+        this.pager.setAdapter(adapter);
+        // buttonShare.setOnClickListener(this);
     }
-
-
-
     public void ShowCurrentItem(View v){
 
         Context context = getApplicationContext();
@@ -78,12 +73,7 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(context,String.valueOf(currentItem), duration);
         toast.show();
 
-
     }
-
-
-
-
 
     public void Compartir(View view) {
        // Toast.makeText(this, "Permisos de mensaje Concedidos", Toast.LENGTH_SHORT).show();
@@ -95,15 +85,46 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Toast.makeText(MainActivity.this,"" + item.getTitle(),
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this," has tocado: " + item.getTitle(),Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
 
         popup.show();
+
     }
 
+    /*
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.uno) {
+            Toast.makeText(this, "Permisos de llamada Concedidos", Toast.LENGTH_SHORT).show();
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+    */
+
+    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.uno:
+                Toast.makeText(MainActivity.this, "Editing!", Toast.LENGTH_SHORT).show();
+                mode.finish(); // Action picked, so close the contextual menu
+                return true;
+            case R.id.dos:
+                // Trigger the deletion here
+                mode.finish(); // Action picked, so close the contextual menu
+                return true;
+            default:
+                return false;
+        }
+    }
 
 }
