@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/fondo_menu"
+    >
+
+<Button
+    android:layout_width="wrap_content"
+    android:id="@+id/bPrecaucion"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:background="@drawable/precaucion"
+    android:onClick="ShowActivity"
+    android:layout_marginTop="10dp"
+
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/bTextos"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="@drawable/texto"
+        android:onClick="ShowActivity"
+        android:layout_marginTop="5dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/bFavoritos"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="@drawable/favoritos"
+        android:onClick="ShowActivity"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/bAutor"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="@drawable/autores"
+        android:onClick="ShowActivity"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/bCreditos"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:background="@drawable/creditos"
+        android:onClick="ShowActivity"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <!--
+        <Button
+            android:layout_width="50px"
+            android:layout_height="20px"
+            android:background="@drawable/texto"
+            />
+
+        <Button
+            android:layout_width="50px"
+            android:layout_height="20px"
+            android:background="@drawable/favoritos"
+            />
+
+
+        <Button
+            android:layout_width="50px"
+            android:layout_height="20px"
+            android:background="@drawable/autores"
+            />
+
+
+        <Button
+            android:layout_width="50px"
+            android:layout_height="20px"
+            android:background="@drawable/creditos"
+            />
+
+
+
+
+
+
+    -->
+
+
+
+</LinearLayout>

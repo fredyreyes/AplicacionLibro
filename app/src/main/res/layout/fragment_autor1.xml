@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fondoApp"
-    android:background="@drawable/fondoapp"
     tools:context="com.example.fredy.aplicacionlibro.Autor1Fragment">
 
     <!-- Toolbar
@@ -50,30 +49,16 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Button" />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textAuthorName"
-            android:layout_width="328dp"
-            android:layout_height="58dp"
-            android:text="Julio Cortázar"
-            android:textSize="5sp"
-            android:layout_weight="0.06" />
+          <ImageView
+              android:id="@+id/imageTexto"
+              android:layout_width="200dp"
+              android:layout_height="100dp"
+              android:scaleType="fitXY"
 
-
-        <TextView
-            android:id="@+id/textDescription"
-            android:layout_width="270dp"
-            android:layout_height="130dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/cloud"
-            android:paddingBottom="10dp"
-            android:paddingLeft="25dp"
-            android:paddingRight="10dp"
-            android:paddingTop="10dp"
-            android:text="!Qué buen porro!"
-            android:textSize="18sp" />
+              />
 
 
     </LinearLayout>
