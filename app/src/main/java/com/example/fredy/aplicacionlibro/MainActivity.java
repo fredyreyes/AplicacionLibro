@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         // Instantiate a ViewPager
 
         Resources res = getResources();
-        String[] autores = res.getStringArray(R.array.Autores);
-        String[] textoAutores = res.getStringArray(R.array.textoAutores);
-        String[] listaImagenesAutores = res.getStringArray(R.array.ImagesAutores);
+        //String[] autores = res.getStringArray(R.array.Autores);
+        //String[] textoAutores = res.getStringArray(R.array.textoAutores);
+        String[] listaImagenesAutores = res.getStringArray(R.array.ImagesTextos);
         popup_but = (Button) findViewById(R.id.btCompartir);
 
 
@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(Autor1Fragment.newInstance(listaImagenesAutores[0],1));
         adapter.addFragment(Autor1Fragment.newInstance(listaImagenesAutores[1],2));
         adapter.addFragment(Autor1Fragment.newInstance(listaImagenesAutores[2],3));
-
+        adapter.addFragment(Autor1Fragment.newInstance(listaImagenesAutores[3],4));
+        adapter.addFragment(Autor1Fragment.newInstance(listaImagenesAutores[4],5));
         /*
         for(int i=0;i<146;i++)
         {

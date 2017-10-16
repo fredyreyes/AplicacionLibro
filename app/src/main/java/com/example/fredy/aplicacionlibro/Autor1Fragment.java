@@ -74,44 +74,35 @@ public class Autor1Fragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_autor1, container, false);
 
         FrameLayout frameLayout=(FrameLayout)rootView.findViewById(R.id.fondoApp);
-        ImageView imagenTexto=(ImageView)rootView.findViewById(R.id.imageTexto);
 
-        Bitmap bmp;
-        int width=100;
-        int height=100;
 
-        bmp= BitmapFactory.decodeResource(getResources(),R.drawable.poesia_digital3);//image is your image
-        bmp=Bitmap.createScaledBitmap(bmp, width,height, true);
-        imagenTexto.setImageBitmap(bmp);
+        //frameLayout.setBackgroundResource(Integer.parseInt(urlImagen));
 
 
         switch (this.index){
 
 
             case 1:
-                //imagenTexto.setImageResource(R.drawable.poesia_digital3);
+                frameLayout.setBackgroundResource(R.drawable.poesia_img2);
 
             break;
 
             case 2:
-             /*   FrameLayout frameLayout2=(FrameLayout)rootView.findViewById(R.id.fondoApp);
 
-                frameLayout2.setBackgroundResource(R.drawable.poesia_digital2);
-                */
-             //   frameLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                frameLayout.setBackgroundResource(R.drawable.poesia_img3);
+            break;
 
+            case 3:
+                frameLayout.setBackgroundResource(R.drawable.poesia_img4);
+
+            break;
+
+            case 4:
+                frameLayout.setBackgroundResource(R.drawable.poesia_img5);
+            break;
+            case 5:    frameLayout.setBackgroundResource(R.drawable.poesia_img6);
             break;
             /*
-            case 3:
-                FrameLayout frameLayout3=(FrameLayout)rootView.findViewById(R.id.fondoApp);
-                frameLayout3.setBackgroundResource(R.drawable.poesia_digital3);
-            break;
-            */
-/*
-            case 4:    frameLayout.setBackgroundResource(R.drawable.poesia_digital4);
-            break;
-            case 5:    frameLayout.setBackgroundResource(R.drawable.poesia_digital5);
-            break;
             case 6:    frameLayout.setBackgroundResource(R.drawable.poesia_digital6);
             break;
             case 7:    frameLayout.setBackgroundResource(R.drawable.poesia_digital7);
