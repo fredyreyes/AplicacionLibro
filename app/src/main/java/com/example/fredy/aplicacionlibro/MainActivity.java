@@ -155,8 +155,6 @@ int resourceId;
 
                 if(id == R.id.dos){
 
-                  //  Toast.makeText(MainActivity.this,"pagina " + String.valueOf(currentItem) ,Toast.LENGTH_SHORT).show();
-
                     sharecompartir();
                 }
 
@@ -180,39 +178,7 @@ int resourceId;
 
 
     void sharecompartir(){
-
-        /*
-        if(R.drawable.poesia_img3 == resourceId ){
-            Toast.makeText(MainActivity.this, "Iguales", Toast.LENGTH_SHORT).show();
-        }
-        imagenViewJohan = new ImageView(getApplicationContext());
-        imagenViewJohan.setImageResource(resourceId);
-        LinearLayout.LayoutParams params = new LinearLayout
-                .LayoutParams(ViewPager.LayoutParams.MATCH_PARENT, ViewPager.LayoutParams.WRAP_CONTENT);
-
-        // Add image path from drawable folder.
-        imagenViewJohan.setLayoutParams(params);
-        */
-        /*
-        imagenView2.setImageResource(resourceId);
-        Bitmap bitmap= viewToBitmap(imagenView2,imagenView2.getWidth(),imagenView2.getHeight());
-        //Bitmap bitmap= viewToBitmap(imagenViewJohan,1000,1000);
-        Intent shareIntent= new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("image/*");
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
-        File file = new File(Environment.getExternalStorageDirectory()+ File.separator+"otra2.jpg");
-
-        try {
-            file.createNewFile();
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            fileOutputStream.write(byteArrayOutputStream.toByteArray());
-        } catch (IOException e) {
-            Log.e("ERROR", e.getMessage() );
-        }
-        shareIntent.putExtra(Intent.EXTRA_STREAM,Uri.parse("file:///sdcard/otra2.jpg"));
-        startActivity(Intent.createChooser(shareIntent,"Share Imagen"));
-*/     int currentItem=pager.getCurrentItem();
+     int currentItem=pager.getCurrentItem();
         resourceId = imgs.getResourceId(currentItem,-1);
         Bitmap imgBitmap= BitmapFactory.decodeResource(getResources(),resourceId);
         String imgBitmapPath= MediaStore.Images.Media.insertImage(getContentResolver(),imgBitmap,"title",null);
