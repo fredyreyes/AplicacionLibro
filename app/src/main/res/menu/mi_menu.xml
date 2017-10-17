@@ -3,13 +3,13 @@
     <item
         android:id="@+id/uno"
 
-        android:title="Compartir Lección"
+        android:title="Compartir Texto"
          />
 
     <item
         android:id="@+id/dos"
 
-        android:title="Compartir Tarjeta"
+        android:title="Compartir Imagen"
          />
     <item
         android:id="@+id/tres"

@@ -1,20 +1,13 @@
 
 package com.example.fredy.aplicacionlibro;
 
-import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 
@@ -83,24 +76,24 @@ public class Autor1Fragment extends Fragment {
 
 
             case 1:
-                frameLayout.setBackgroundResource(R.drawable.poesia_img2);
+                frameLayout.setBackgroundResource(R.drawable.poesia);
 
             break;
 
             case 2:
 
-                frameLayout.setBackgroundResource(R.drawable.poesia_img3);
+                frameLayout.setBackgroundResource(R.drawable.poesia2);
             break;
 
             case 3:
-                frameLayout.setBackgroundResource(R.drawable.poesia_img4);
+                frameLayout.setBackgroundResource(R.drawable.poesia3);
 
             break;
 
             case 4:
-                frameLayout.setBackgroundResource(R.drawable.poesia_img5);
+                frameLayout.setBackgroundResource(R.drawable.poesia4);
             break;
-            case 5:    frameLayout.setBackgroundResource(R.drawable.poesia_img6);
+            case 5:    frameLayout.setBackgroundResource(R.drawable.poesia5);
             break;
             /*
             case 6:    frameLayout.setBackgroundResource(R.drawable.poesia_digital6);
