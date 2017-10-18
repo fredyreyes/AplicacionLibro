@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,11 +10,16 @@
     android:background="@drawable/fondo_menu"
     >
 
-<Button
-    android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <Button
+    android:layout_width="160dp"
     android:id="@+id/bPrecaucion"
     android:gravity="center_horizontal"
-    android:layout_height="wrap_content"
+    android:layout_height="40dp"
     android:background="@drawable/precaucion"
     android:onClick="ShowActivity"
     android:layout_marginTop="10dp"
@@ -21,46 +27,42 @@
     />
 
     <Button
-        android:layout_width="wrap_content"
         android:id="@+id/bTextos"
-        android:gravity="center_horizontal"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/texto"
-        android:onClick="ShowActivity"
-        android:layout_marginTop="5dp"
-        />
+        android:gravity="center_horizontal"
+        android:onClick="ShowActivity" />
 
     <Button
-        android:layout_width="wrap_content"
         android:id="@+id/bFavoritos"
-        android:gravity="center_horizontal"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/favoritos"
-        android:onClick="ShowActivity"
-        android:layout_marginTop="5dp"
-        />
+        android:gravity="center_horizontal"
+        android:onClick="ShowActivity" />
 
 
     <Button
-        android:layout_width="wrap_content"
         android:id="@+id/bAutor"
-        android:gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:background="@drawable/autores"
-        android:onClick="ShowActivity"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        />
+        android:background="@drawable/autores"
+        android:gravity="center_horizontal"
+        android:onClick="ShowActivity" />
 
 
     <Button
-        android:layout_width="wrap_content"
         android:id="@+id/bCreditos"
-        android:gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:background="@drawable/creditos"
-        android:onClick="ShowActivity"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        />
+        android:background="@drawable/creditos"
+        android:gravity="center_horizontal"
+        android:onClick="ShowActivity" />
 
 
     <!--
