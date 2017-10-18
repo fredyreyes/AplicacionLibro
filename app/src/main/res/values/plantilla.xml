@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string-array name="ImagesTextos">
-    <item>@drawable/poesia</item>
-    <item>@drawable/poesia2</item>
-    <item>@drawable/poesia3</item>
-    <item>@drawable/poesia4</item>
-    <item>@drawable/poesia5</item>
+
     <item>@drawable/poesia_img4</item>
     <item>@drawable/poesia_img5</item>
     <item>@drawable/poesia_img6</item>
