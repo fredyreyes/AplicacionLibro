@@ -1,8 +1,10 @@
 package com.example.fredy.aplicacionlibro;
 
 import android.app.Application;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager pager = null;
     Button popup_but;
     MenuItem item;
+    Favorites objDatabase;
     /**
      * The pager adapter, which provides the pages to the view pager widget.
      */
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Instantiate a ViewPager
 
+        objDatabase =  new Favorites(this, "DbAplicacionLibro", null, 1);
         Resources res = getResources();
         //String[] autores = res.getStringArray(R.array.Autores);
         //String[] textoAutores = res.getStringArray(R.array.textoAutores);
@@ -91,16 +95,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Compartir(View view) {
-       // Toast.makeText(this, "Permisos de mensaje Concedidos", Toast.LENGTH_SHORT).show();
+
+        final int currentItem=pager.getCurrentItem();
+        // Toast.makeText(this, "Permisos de mensaje Concedidos", Toast.LENGTH_SHORT).show();
         PopupMenu popup = new PopupMenu(MainActivity.this, view);
         popup.getMenuInflater().inflate(R.menu.mi_menu, popup.getMenu());
 
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener(){
 
-
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Toast.makeText(MainActivity.this," has tocado: " + item.getTitle(),Toast.LENGTH_SHORT).show();
+
+                if(item.getItemId()==R.id.tres)
+                {   Resources res = getResources();
+                    String[] listaImagenesAutores = res.getStringArray(R.array.ImagesTextos);
+                    SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
+                    ContentValues nuevoRegistro = new ContentValues();
+
+                    nuevoRegistro.put("identificacion", currentItem);
+                    nuevoRegistro.put("urlImagen",String.valueOf(listaImagenesAutores[currentItem]));
+                    dbFavorites.insert("Favoritos", null, nuevoRegistro);
+                    dbFavorites.close();
+                    Toast.makeText(MainActivity.this," has guardado: " + item.getTitle(),Toast.LENGTH_SHORT).show();
+                }
+
+                Toast.makeText(MainActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
