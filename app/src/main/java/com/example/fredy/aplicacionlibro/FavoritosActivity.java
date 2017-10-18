@@ -1,25 +1,22 @@
 package com.example.fredy.aplicacionlibro;
 
-import android.app.Application;
-import android.content.ContentValues;
 import android.Manifest;
-import android.content.Context;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ActionMode;
+import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,11 +25,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-//TE AMO JOHAN!!
-//JOHANN POLANA GONZALEZ
-public class MainActivity extends AppCompatActivity {
+public class FavoritosActivity extends AppCompatActivity {
 
-int resourceId;
+
+    int resourceId;
     TypedArray imgs;
     ViewPager pager = null;
     Button popup_but;
@@ -51,83 +47,71 @@ int resourceId;
     int pruebaArreglo=1;
 
     @SuppressWarnings("ResourceType")
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        // Instantiate a ViewPagerf
-
+        setContentView(R.layout.activity_favoritos);
 
         objDatabase =  new Favorites(this, "DbAplicacionLibro", null, 1);
+        SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
+        Cursor c= dbFavorites.rawQuery("SELECT * FROM Favoritos",null);
+
         Resources res = getResources();
+        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         //String[] autores = res.getStringArray(R.array.Autores);
         textoAutores = res.getStringArray(R.array.textoAutores);
         String[] listaImagenesAutores = res.getStringArray(R.array.ImagesTextos);
         popup_but = (Button) findViewById(R.id.btCompartir);
-      //  imagenView2 = (ImageView) findViewById(R.id.imgModelito);
-      //  imagenView2.setVisibility(View.INVISIBLE);
+
         //******************* edicion johan *******************
 
-         imgs = getResources().obtainTypedArray(R.array.ImagesTextos);
-
-
-        this.pager = (ViewPager) this.findViewById(R.id.pager);
-       // buttonShare=(Button)findViewById(R.id.buttonShare);
-        //Toolbar toolbar=(Toolbar)(findViewById(R.id.toolbarBooks));
-        //toolbar.setTitle("");
-        //setSupportActionBar(toolbar);
+        imgs = getResources().obtainTypedArray(R.array.ImagesTextos);
+        pager = (ViewPager) this.findViewById(R.id.pagerFavoritos);
 
 
 
-        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(FavoritosActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
 
 
-           // Toast.makeText(MainActivity.this, "Permiso de llamada Concedido", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(MainActivity.this, "Permiso de llamada Concedido", Toast.LENGTH_SHORT).show();
 
         } else {
 
 
-            //     explicarUsoPermiso();
+
             solicitarPermisoEscribir();
         }
 
-        // Create an adapter with the fragments we show on the ViewPager
-     MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
-
-        for(int i=0;i<imgs.length()-1;i++)
+        if(c.moveToFirst())
         {
-            int urlImagen=imgs.getResourceId(i,-1);
+            do{
 
-            adapter.addFragment(Autor1Fragment.newInstance(String.valueOf(urlImagen),i));
+                int indiceImagen=Integer.parseInt(c.getString(0));
+                String urlImagen=c.getString(1);
+                adapter.addFragment(Autor1Fragment.newInstance(urlImagen,indiceImagen));
+
+            }
+            while (c.moveToNext());
+
 
 
         }
+        pager.setAdapter(adapter);
 
 
-
-       this.pager.setAdapter(adapter);
 
 
 
     }
 
-
-
-    public void ShowCurrentItem(View v){
-
-        Context context = getApplicationContext();
-        CharSequence text = "Hello toast!";
-        int duration = Toast.LENGTH_SHORT;
-        int currentItem=pager.getCurrentItem();
-        Toast toast = Toast.makeText(context,String.valueOf(currentItem), duration);
-        toast.show();
-
-    }
 
     public void Compartir(View view) {
-       // Toast.makeText(this, "Permisos de mensaje Concedidos", Toast.LENGTH_SHORT).show();
-        PopupMenu popup = new PopupMenu(MainActivity.this, view);
-        popup.getMenuInflater().inflate(R.menu.mi_menu, popup.getMenu());
+        // Toast.makeText(this, "Permisos de mensaje Concedidos", Toast.LENGTH_SHORT).show();
+        PopupMenu popup = new PopupMenu(FavoritosActivity.this, view);
+        popup.getMenuInflater().inflate(R.menu.mi_menu_favoritos, popup.getMenu());
 
 
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener(){
@@ -136,39 +120,65 @@ int resourceId;
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
-                 int id=item.getItemId();
-                 int currentItem=pager.getCurrentItem();
-                 SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
-                if(item.getItemId()==R.id.tres)
+                MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
+                int id=item.getItemId();
+                int currentItem=pager.getCurrentItem();
+                SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
+                if(item.getItemId()==R.id.tresFavoritos)
 
                 {
 
-                    Cursor c = dbFavorites.rawQuery("SELECT * FROM Favoritos WHERE identificacion=?",new String[] {String.valueOf(currentItem)}) ;
-
-                    if(c.getCount()==0)
-                     {
-                         Resources res = getResources();
-                         int resourceId2 = imgs.getResourceId(currentItem,-1);
-                         String[] listaImagenesAutores = res.getStringArray(R.array.ImagesTextos);
-                         ContentValues nuevoRegistro = new ContentValues();
-                         nuevoRegistro.put("identificacion", currentItem);
-                         nuevoRegistro.put("urlImagen",String.valueOf(resourceId2));
-                         dbFavorites.insert("Favoritos", null, nuevoRegistro);
-
-                         Toast.makeText(MainActivity.this," Has guardado este exto en Favoritos: ",Toast.LENGTH_SHORT).show();
-
-
-                     }
-                     else
+                    Cursor c = dbFavorites.rawQuery("SELECT * FROM Favoritos",null) ;
+                    if(c.moveToPosition(currentItem))
                     {
-                        Toast.makeText(MainActivity.this," Este texto ya se encuentra guardado en favoritos",Toast.LENGTH_SHORT).show();
+                        String identificacionFavorito=c.getString(0);
+                        Toast.makeText(FavoritosActivity.this," Se ha borrado el item: " + identificacionFavorito,Toast.LENGTH_SHORT).show();
+                        dbFavorites.execSQL("DELETE  FROM Favoritos WHERE identificacion=?",new String[] {String.valueOf(identificacionFavorito)});
+
+
+
+                            Cursor c2= dbFavorites.rawQuery("SELECT * FROM Favoritos",null);
+
+                            if(c2.moveToFirst())
+                            {
+                                do{
+
+                                    int indiceImagen=Integer.parseInt(c2.getString(0));
+                                    String urlImagen=c2.getString(1);
+                                    adapter.addFragment(Autor1Fragment.newInstance(urlImagen,indiceImagen));
+
+
+
+                                }
+
+
+                                while(c2.moveToNext());
+
+
+                                pager.setCurrentItem(0);
+
+                                pager.setAdapter(adapter);
+                            }
+                            else
+                            {
+                                finish();
+
+                            }
+
+
+
+
+
+
 
                     }
+
+
 
                     dbFavorites.close();
                 }
 
-                if(id == R.id.uno){
+                if(id == R.id.unoFavoritos){
 
 
                     // Toast.makeText(MainActivity.this,"Haz tocado el Uno",Toast.LENGTH_SHORT).show();
@@ -181,13 +191,13 @@ int resourceId;
                     startActivity(Intent.createChooser(shareIntent,"Share via"));
                 }
 
-                if(id == R.id.dos){
+                if(id == R.id.dosFavoritos){
 
                     sharecompartir();
                 }
 
 
-                Toast.makeText(MainActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(FavoritosActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -234,6 +244,4 @@ int resourceId;
     }
 
 
-
 }
-

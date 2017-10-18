@@ -67,35 +67,38 @@ public class Autor1Fragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_autor1, container, false);
 
         FrameLayout frameLayout=(FrameLayout)rootView.findViewById(R.id.fondoApp);
+         int idImagen=Integer.parseInt(this.urlImagen);
+        frameLayout.setBackgroundResource(idImagen);
 
-
-        //frameLayout.setBackgroundResource(Integer.parseInt(urlImagen));
-
+/*
 
         switch (this.index){
 
 
             case 1:
-                frameLayout.setBackgroundResource(R.drawable.poesia);
+                frameLayout.setBackgroundResource(R.drawable.poesia_img2);
 
             break;
 
             case 2:
 
-                frameLayout.setBackgroundResource(R.drawable.poesia2);
+                frameLayout.setBackgroundResource(R.drawable.poesia_img3);
             break;
 
             case 3:
-                frameLayout.setBackgroundResource(R.drawable.poesia3);
+                frameLayout.setBackgroundResource(R.drawable.poesia_img4);
 
             break;
 
             case 4:
-                frameLayout.setBackgroundResource(R.drawable.poesia4);
+                frameLayout.setBackgroundResource(R.drawable.poesia_img5);
             break;
-            case 5:    frameLayout.setBackgroundResource(R.drawable.poesia5);
+            case 5:    frameLayout.setBackgroundResource(R.drawable.poesia_img6);
             break;
-            /*
+
+
+            */
+/*
             case 6:    frameLayout.setBackgroundResource(R.drawable.poesia_digital6);
             break;
             case 7:    frameLayout.setBackgroundResource(R.drawable.poesia_digital7);
@@ -379,9 +382,11 @@ public class Autor1Fragment extends Fragment {
             case 146:    frameLayout.setBackgroundResource(R.drawable.poesia_digital146);
             break;
 
-*/
+*//*
+
 
         }
+*/
 
 
 
