@@ -21,7 +21,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 
 public class FavoritosActivity extends AppCompatActivity {
@@ -133,7 +132,7 @@ public class FavoritosActivity extends AppCompatActivity {
                     if(c.moveToPosition(currentItem))
                     {
                         String identificacionFavorito=c.getString(0);
-                        Toast.makeText(FavoritosActivity.this," Se ha borrado el item: " + identificacionFavorito,Toast.LENGTH_SHORT).show();
+                    //    Toast.makeText(FavoritosActivity.this," Se ha borrado el item: " + identificacionFavorito,Toast.LENGTH_SHORT).show();
                         dbFavorites.execSQL("DELETE  FROM Favoritos WHERE identificacion=?",new String[] {String.valueOf(identificacionFavorito)});
 
 
@@ -198,7 +197,7 @@ public class FavoritosActivity extends AppCompatActivity {
                 }
 
 
-                Toast.makeText(FavoritosActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
+            //    Toast.makeText(FavoritosActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
