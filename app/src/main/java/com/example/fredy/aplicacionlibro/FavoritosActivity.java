@@ -1,7 +1,6 @@
 package com.example.fredy.aplicacionlibro;
 
 import android.Manifest;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -12,11 +11,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,6 +29,7 @@ public class FavoritosActivity extends AppCompatActivity {
 
     int resourceId;
     TypedArray imgs;
+    TypedArray imgShare;
     ViewPager pager = null;
     Button popup_but;
     MenuItem item;
@@ -69,6 +69,7 @@ public class FavoritosActivity extends AppCompatActivity {
         //******************* edicion johan *******************
 
         imgs = getResources().obtainTypedArray(R.array.ImagesTextos);
+        imgShare = getResources().obtainTypedArray(R.array.ImagenesCompartir);
         pager = (ViewPager) this.findViewById(R.id.pagerFavoritos);
 
 
@@ -218,7 +219,7 @@ public class FavoritosActivity extends AppCompatActivity {
 
     void sharecompartir(){
         int currentItem=pager.getCurrentItem();
-        resourceId = imgs.getResourceId(currentItem,-1);
+        resourceId = imgShare.getResourceId(currentItem,-1);
         Bitmap imgBitmap= BitmapFactory.decodeResource(getResources(),resourceId);
         String imgBitmapPath= MediaStore.Images.Media.insertImage(getContentResolver(),imgBitmap,"title",null);
         Uri uri=Uri.parse(imgBitmapPath);
@@ -239,7 +240,7 @@ public class FavoritosActivity extends AppCompatActivity {
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 SOLICITUD_PERMISO_WRITE);
 
-        Toast.makeText(this, "Permisos de llamada Concedidos", Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, "Permisos de llamada Concedidos", Toast.LENGTH_SHORT).show();
 
     }
 

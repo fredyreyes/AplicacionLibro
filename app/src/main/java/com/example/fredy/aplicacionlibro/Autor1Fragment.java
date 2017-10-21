@@ -388,8 +388,6 @@ public class Autor1Fragment extends Fragment {
         }
 */
 
-
-
         return rootView;
 
     }

@@ -1,15 +1,14 @@
 package com.example.fredy.aplicacionlibro;
 
-import android.app.Application;
-import android.content.ContentValues;
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -19,7 +18,6 @@ import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ActionMode;
 import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 int resourceId;
     TypedArray imgs;
+    TypedArray imgsShare;
     ViewPager pager = null;
     Button popup_but;
     MenuItem item;
@@ -69,6 +68,7 @@ int resourceId;
         //******************* edicion johan *******************
 
          imgs = getResources().obtainTypedArray(R.array.ImagesTextos);
+        imgsShare = getResources().obtainTypedArray(R.array.ImagenesCompartir);
 
 
         this.pager = (ViewPager) this.findViewById(R.id.pager);
@@ -80,7 +80,6 @@ int resourceId;
 
 
         if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-
 
            // Toast.makeText(MainActivity.this, "Permiso de llamada Concedido", Toast.LENGTH_SHORT).show();
 
@@ -119,8 +118,8 @@ int resourceId;
         CharSequence text = "Hello toast!";
         int duration = Toast.LENGTH_SHORT;
         int currentItem=pager.getCurrentItem();
-        Toast toast = Toast.makeText(context,String.valueOf(currentItem), duration);
-        toast.show();
+     //   Toast toast = Toast.makeText(context,String.valueOf(currentItem), duration);
+      //  toast.show();
 
     }
 
@@ -187,7 +186,7 @@ int resourceId;
                 }
 
 
-                Toast.makeText(MainActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(MainActivity.this," has tocado: " + item.getItemId(),Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -208,7 +207,7 @@ int resourceId;
 
     void sharecompartir(){
         int currentItem=pager.getCurrentItem();
-        resourceId = imgs.getResourceId(currentItem,-1);
+        resourceId = imgsShare.getResourceId(currentItem,-1);
         Bitmap imgBitmap= BitmapFactory.decodeResource(getResources(),resourceId);
         String imgBitmapPath= MediaStore.Images.Media.insertImage(getContentResolver(),imgBitmap,"title",null);
         Uri uri=Uri.parse(imgBitmapPath);
@@ -229,7 +228,7 @@ int resourceId;
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 SOLICITUD_PERMISO_WRITE);
 
-        Toast.makeText(this, "Permisos de llamada Concedidos", Toast.LENGTH_SHORT).show();
+    //    Toast.makeText(this, "Permisos de llamada Concedidos", Toast.LENGTH_SHORT).show();
 
     }
 
