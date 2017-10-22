@@ -62,7 +62,8 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             case R.id.bAutor:
-
+                i = new Intent(this, Autores.class );
+                startActivity(i);
                 break;
 
 

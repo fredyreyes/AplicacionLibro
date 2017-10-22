@@ -698,7 +698,13 @@
     </string-array>
 
 
+    <string-array name="ImageAutores">
+        <item>@drawable/autores1</item>
+        <item>@drawable/autores2</item>
+        <item>@drawable/autores3</item>
+        <item>@drawable/autores4</item>
 
+    </string-array>
 
 
 
