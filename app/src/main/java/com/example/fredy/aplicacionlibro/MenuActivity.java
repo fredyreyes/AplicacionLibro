@@ -80,7 +80,8 @@ Button bFavoritos;
                 bTextos.setBackgroundResource(R.drawable.texto);
                 break;
             case R.id.bAutor:
-
+                i = new Intent(this, Autores.class );
+                startActivity(i);
                 break;
 
 

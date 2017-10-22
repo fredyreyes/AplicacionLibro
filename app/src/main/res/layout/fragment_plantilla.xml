@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fondoPlantilla"
+    android:layout_height="match_parent"
+    tools:context="com.example.fredy.aplicacionlibro.PlantillaFragment">
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="427dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="496dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.99"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btDevolver"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.01"
+            android:gravity="center_horizontal"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

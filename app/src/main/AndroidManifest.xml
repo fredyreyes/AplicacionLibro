@@ -21,9 +21,16 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".PrecaucionActivity" />
-        <activity android:name=".CreditosActivity" />
-        <activity android:name=".FavoritosActivity"></activity>
+        <activity
+            android:name=".PrecaucionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreditosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FavoritosActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Autores"></activity>
     </application>
 
 </manifest>

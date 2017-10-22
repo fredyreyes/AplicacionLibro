@@ -1,5 +1,5 @@
-
 package com.example.fredy.aplicacionlibro;
+
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 
-
-public class Autor1Fragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class PlantillaFragment extends Fragment {
 
 
     private static final String ARG_PARAM1 = "urlImagen";
@@ -25,14 +25,9 @@ public class Autor1Fragment extends Fragment {
     private int index;
 
 
-    public Autor1Fragment() {
-        // Required empty public constructor
-    }
-
-
     // TODO: Rename and change types and number of parameters
-    public static Autor1Fragment newInstance(String urlImagen, int index) {
-        Autor1Fragment fragment = new Autor1Fragment();
+    public static PlantillaFragment newInstance(String urlImagen, int index) {
+        PlantillaFragment fragment = new PlantillaFragment();
         Bundle args = new Bundle();
 
 
@@ -55,23 +50,33 @@ public class Autor1Fragment extends Fragment {
         }
     }
 
+
+
+    public PlantillaFragment() {
+
+
+    }
+
+
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_autor1, container, false);
+                R.layout.fragment_plantilla, container, false);
 
 
         Resources res = getResources();
 
-        View view=inflater.inflate(R.layout.fragment_autor1, container, false);
+        View view=inflater.inflate(R.layout.fragment_plantilla, container, false);
 
-        FrameLayout frameLayout=(FrameLayout)rootView.findViewById(R.id.fondoApp);
-         int idImagen=Integer.parseInt(this.urlImagen);
+        FrameLayout frameLayout=(FrameLayout)rootView.findViewById(R.id.fondoPlantilla);
+        int idImagen=Integer.parseInt(this.urlImagen);
         frameLayout.setBackgroundResource(idImagen);
 
         return rootView;
 
     }
+
 
 }
