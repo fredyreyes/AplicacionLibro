@@ -123,11 +123,11 @@ public class FavoritosActivity extends AppCompatActivity {
                 MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
                 int id=item.getItemId();
                 int currentItem=pager.getCurrentItem();
-                SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
+
                 if(item.getItemId()==R.id.tresFavoritos)
 
-                {
-
+                 {
+                     SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
                     Cursor c = dbFavorites.rawQuery("SELECT * FROM Favoritos",null) ;
                     if(c.moveToPosition(currentItem))
                     {
@@ -174,17 +174,34 @@ public class FavoritosActivity extends AppCompatActivity {
                     dbFavorites.close();
                 }
 
+
                 if(id == R.id.unoFavoritos){
 
-
+                    SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
+                    String identificacionActualFavorito="";
                     // Toast.makeText(MainActivity.this,"Haz tocado el Uno",Toast.LENGTH_SHORT).show();
                     // Toast.makeText(MainActivity.this,textoAutores[currentItem],Toast.LENGTH_SHORT).show();
                     // ***************************    Funcion Compartir **************************************************
-                    shareIntent= new Intent(android.content.Intent.ACTION_SEND);
-                    shareIntent.setType("text/plain");
-                    shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Poesía Digital");
-                    shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,textoAutores[currentItem]);
-                    startActivity(Intent.createChooser(shareIntent,"Share via"));
+
+                    Cursor c = dbFavorites.rawQuery("SELECT * FROM Favoritos",null) ;
+                    if(c.moveToPosition(currentItem)) {
+                        identificacionActualFavorito = c.getString(0);
+
+                    }
+
+
+                    int idTexto=Integer.parseInt(identificacionActualFavorito);
+                    if(idTexto>=0)
+                    {
+                        shareIntent= new Intent(android.content.Intent.ACTION_SEND);
+                        shareIntent.setType("text/plain");
+                        shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Poesía Digital");
+                        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,textoAutores[idTexto]);
+                        startActivity(Intent.createChooser(shareIntent,"Share via"));
+
+                    }
+
+                    dbFavorites.close();
                 }
 
                 if(id == R.id.dosFavoritos){
@@ -213,16 +230,32 @@ public class FavoritosActivity extends AppCompatActivity {
 
 
     void sharecompartir(){
+        SQLiteDatabase dbFavorites = objDatabase.getWritableDatabase();
         int currentItem=pager.getCurrentItem();
+
+
+        String identificacionActualFavorito="";
+        int idImagenShare=0;
+        // Toast.makeText(MainActivity.this,"Haz tocado el Uno",Toast.LENGTH_SHORT).show();
+        // Toast.makeText(MainActivity.this,textoAutores[currentItem],Toast.LENGTH_SHORT).show();
+        // ***************************    Funcion Compartir **************************************************
+
+        Cursor c = dbFavorites.rawQuery("SELECT * FROM Favoritos",null) ;
+        if(c.moveToPosition(currentItem)) {
+            identificacionActualFavorito = c.getString(0);
+            idImagenShare=Integer.parseInt(c.getString(2));
+        }
+
+
         resourceId = imgShare.getResourceId(currentItem,-1);
-        Bitmap imgBitmap= BitmapFactory.decodeResource(getResources(),resourceId);
+        Bitmap imgBitmap= BitmapFactory.decodeResource(getResources(),idImagenShare);
         String imgBitmapPath= MediaStore.Images.Media.insertImage(getContentResolver(),imgBitmap,"title",null);
         Uri uri=Uri.parse(imgBitmapPath);
 
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);
         shareIntent.setType("image/*");
-
+        dbFavorites.close();
         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
         //  shareIntent.putExtra(Intent.EXTRA_TEXT, "Hello, This is test Sharing");
         startActivity(Intent.createChooser(shareIntent, "Send your image"));

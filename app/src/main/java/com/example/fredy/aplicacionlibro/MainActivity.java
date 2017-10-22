@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 int resourceId;
     TypedArray imgs;
     TypedArray imgsShare;
+
     ViewPager pager = null;
     Button popup_but;
     MenuItem item;
@@ -67,8 +68,8 @@ int resourceId;
       //  imagenView2.setVisibility(View.INVISIBLE);
         //******************* edicion johan *******************
 
-         imgs = getResources().obtainTypedArray(R.array.ImagesTextos);
-        imgsShare = getResources().obtainTypedArray(R.array.ImagenesCompartir);
+          imgs = getResources().obtainTypedArray(R.array.ImagesTextos);
+          imgsShare = getResources().obtainTypedArray(R.array.ImagenesCompartir);
 
 
         this.pager = (ViewPager) this.findViewById(R.id.pager);
@@ -148,10 +149,14 @@ int resourceId;
                      {
                          Resources res = getResources();
                          int resourceId2 = imgs.getResourceId(currentItem,-1);
+                         int idImageShare=imgsShare.getResourceId(currentItem,-1);
                          String[] listaImagenesAutores = res.getStringArray(R.array.ImagesTextos);
+
+
                          ContentValues nuevoRegistro = new ContentValues();
                          nuevoRegistro.put("identificacion", currentItem);
                          nuevoRegistro.put("urlImagen",String.valueOf(resourceId2));
+                         nuevoRegistro.put("idImageShare",String.valueOf(idImageShare));
                          dbFavorites.insert("Favoritos", null, nuevoRegistro);
 
                          Toast.makeText(MainActivity.this," Has guardado este exto en Favoritos: ",Toast.LENGTH_SHORT).show();
