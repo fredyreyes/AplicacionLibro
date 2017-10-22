@@ -41,7 +41,7 @@ Button bFavoritos;
             }
         });
 
-
+/*
         bAutores.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -56,7 +56,7 @@ Button bFavoritos;
             }
         });
 
-
+*/
 
         bCreditos.setOnTouchListener(new View.OnTouchListener() {
 
