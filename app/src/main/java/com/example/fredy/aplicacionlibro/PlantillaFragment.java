@@ -78,5 +78,4 @@ public class PlantillaFragment extends Fragment {
 
     }
 
-
 }

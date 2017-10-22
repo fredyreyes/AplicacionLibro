@@ -8,38 +8,29 @@
 
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="427dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1">
 
 
-        <LinearLayout
-            android:layout_width="496dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="0.99"></LinearLayout>
-
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="0.07">
 
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btDevolver"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="0.01"
-            android:gravity="center_horizontal"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:textAlignment="center" />
-
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="184dp"
+                android:layout_height="89dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.07"
+                android:background="@android:color/transparent"
+                android:onClick="devolverme" />
+        </FrameLayout>
 
     </LinearLayout>
 

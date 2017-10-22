@@ -1,16 +1,12 @@
 package com.example.fredy.aplicacionlibro;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class PrecaucionActivity extends AppCompatActivity {
@@ -61,5 +57,12 @@ public class PrecaucionActivity extends AppCompatActivity {
         //   Toast toast = Toast.makeText(context,String.valueOf(currentItem), duration);
         //  toast.show();
 
+    }
+
+    public void devolverme(View view) {
+        // i = new Intent(this, MenuActivity.class );
+        //startActivity(i);
+        finish();
+        // Toast.makeText(this, "aqui me devuelvo", Toast.LENGTH_SHORT).show();
     }
 }

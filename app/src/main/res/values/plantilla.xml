@@ -547,8 +547,6 @@
         <item>Me enredas los sueños, tus\n aves cantan en mi paraíso </item><!-- 6-->
         <item>No soporto estos sabores amargos en mi boca\n
             Devuélveme el gusto</item><!-- 7-->
-        <item>Entra, ponte cómoda.\n
-            Mi desamor te atenderá en un minuto.</item><!-- 8-->
         <item> Entra, ponte cómoda.\n Mi desamor te atenderá en un minuto.</item><!-- 9-->
         <item>Antes de conocerte,\n era invisible sin tu mirada\n
             mi pupila desnuda,\nllenaste.</item><!-- 10-->
@@ -710,11 +708,9 @@
         <item>@drawable/autores1</item>
         <item>@drawable/autores2</item>
         <item>@drawable/autores3</item>
-        <item>@drawable/autores4</item>
+        <item>@drawable/autore4</item>
 
-    </string-array>
-
-
+   </string-array>
 
 
 
