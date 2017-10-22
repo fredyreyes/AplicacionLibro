@@ -167,10 +167,6 @@ public class FavoritosActivity extends AppCompatActivity {
 
 
 
-
-
-
-
                     }
 
 

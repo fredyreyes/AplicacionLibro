@@ -1,16 +1,19 @@
 package com.example.fredy.aplicacionlibro;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public class Autores extends AppCompatActivity {
 
     ViewPager pagerAutores = null;
     TypedArray imgs;
     MyFragmentPagerAdapter pagerAdapter;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +39,13 @@ public class Autores extends AppCompatActivity {
         this.pagerAutores.setAdapter(adapter);
 
 
+    }
+
+
+    public void devolverme(View view) {
+       // i = new Intent(this, MenuActivity.class );
+        //startActivity(i);
+        finish();
+       // Toast.makeText(this, "aqui me devuelvo", Toast.LENGTH_SHORT).show();
     }
 }
