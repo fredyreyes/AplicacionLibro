@@ -20,7 +20,7 @@
     android:id="@+id/bPrecaucion"
     android:gravity="center_horizontal"
     android:layout_height="40dp"
-    android:background="@drawable/precaucion"
+    android:background="@drawable/boton_precaucion"
     android:onClick="ShowActivity"
     android:layout_marginTop="10dp"
 
@@ -31,7 +31,7 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/texto"
+        android:background="@drawable/boton_texto"
         android:gravity="center_horizontal"
         android:onClick="ShowActivity" />
 
@@ -40,7 +40,7 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/favoritos"
+        android:background="@drawable/boton_favoritos"
         android:gravity="center_horizontal"
         android:onClick="ShowActivity" />
 
@@ -50,7 +50,7 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/autores"
+        android:background="@drawable/boton_autores"
         android:gravity="center_horizontal"
         android:onClick="ShowActivity" />
 
@@ -60,44 +60,48 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
-        android:background="@drawable/creditos"
+        android:background="@drawable/boton_creditos"
         android:gravity="center_horizontal"
         android:onClick="ShowActivity" />
-
-
     <!--
-        <Button
-            android:layout_width="50px"
-            android:layout_height="20px"
-            android:background="@drawable/texto"
-            />
-
-        <Button
-            android:layout_width="50px"
-            android:layout_height="20px"
-            android:background="@drawable/favoritos"
-            />
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:drawable="@drawable/botontex1" android:state_pressed="true">
+                <item android:drawable="@drawable/botontex2" android:state_pressed="false">
+                </item></item></selector>
 
 
-        <Button
-            android:layout_width="50px"
-            android:layout_height="20px"
-            android:background="@drawable/autores"
-            />
+            <Button
+                android:layout_width="50px"
+                android:layout_height="20px"
+                android:background="@drawable/texto"
+                />
+
+            <Button
+                android:layout_width="50px"
+                android:layout_height="20px"
+                android:background="@drawable/favoritos"
+                />
 
 
-        <Button
-            android:layout_width="50px"
-            android:layout_height="20px"
-            android:background="@drawable/creditos"
-            />
+            <Button
+                android:layout_width="50px"
+                android:layout_height="20px"
+                android:background="@drawable/autores"
+                />
+
+
+            <Button
+                android:layout_width="50px"
+                android:layout_height="20px"
+                android:background="@drawable/creditos"
+                />
 
 
 
 
 
 
-    -->
+        -->
 
 
 

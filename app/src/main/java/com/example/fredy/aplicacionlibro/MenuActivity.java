@@ -5,26 +5,30 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+
+import static com.example.fredy.aplicacionlibro.R.id.bFavoritos;
+import static com.example.fredy.aplicacionlibro.R.id.bPrecaucion;
 
 public class MenuActivity extends AppCompatActivity {
 
+    /*
 Button bAutores;
 Button bCreditos;
 Button bTextos;
 Button bPrecaucion;
 Button bFavoritos;
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        /*
         bAutores = (Button) findViewById(R.id.btAutor);
         bCreditos=(Button) findViewById(R.id.bCreditos);
-        bPrecaucion=(Button) findViewById(R.id.bPrecaucion);
-        bFavoritos=(Button) findViewById(R.id.bFavoritos);
+        bPrecaucion=(Button) findViewById(bPrecaucion);
+        bFavoritos=(Button) findViewById(bFavoritos);
         bTextos=(Button) findViewById(R.id.bTextos);
 
         bPrecaucion.setOnTouchListener(new View.OnTouchListener() {
@@ -40,6 +44,8 @@ Button bFavoritos;
                 return false;
             }
         });
+
+
 
 
         bAutores.setOnTouchListener(new View.OnTouchListener() {
@@ -105,7 +111,7 @@ Button bFavoritos;
         });
 
 
-
+*/
 
     }
 
@@ -119,7 +125,7 @@ Button bFavoritos;
         Intent i;
         switch (view.getId())
         {
-            case R.id.bPrecaucion:
+            case bPrecaucion:
 
 
                 i = new Intent(this, PrecaucionActivity.class );
@@ -134,7 +140,7 @@ Button bFavoritos;
 
                 break;
 
-            case R.id.bFavoritos:
+            case bFavoritos:
 
 
                 Favorites objDatabase =  new Favorites(this, "DbAplicacionLibro", null, 1);
