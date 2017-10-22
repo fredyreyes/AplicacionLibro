@@ -40,7 +40,7 @@ public class PrecaucionActivity extends AppCompatActivity {
         {
             int urlImagen=imgs.getResourceId(i,-1);
 
-            adapter.addFragment(Autor1Fragment.newInstance(String.valueOf(urlImagen),i));
+            adapter.addFragment(PlantillaFragment.newInstance(String.valueOf(urlImagen),i));
 
 
         }
