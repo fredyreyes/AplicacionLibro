@@ -2,20 +2,44 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_marginBottom="5dp"
+    android:layout_marginBottom="0dp"
     android:paddingBottom="5dp"
-    android:background="#ffffff"
+    android:background="@drawable/intro_imagen"
 
     >
-<VideoView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/idVideoIntro"
-    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btCompartir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+
+            android:gravity="bottom"
+            android:onClick="IngresarPoesia" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <VideoView
+                android:id="@+id/idVideoIntro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.72" />
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

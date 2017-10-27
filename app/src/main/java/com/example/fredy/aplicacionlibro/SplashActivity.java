@@ -3,8 +3,9 @@ package com.example.fredy.aplicacionlibro;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.VideoView;
 
@@ -25,9 +26,15 @@ public class SplashActivity extends AppCompatActivity {
         videoIntro.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
-             startActivity(new Intent(SplashActivity.this, IntroActivity.class));
-                finish();
+          //   startActivity(new Intent(SplashActivity.this, IntroActivity.class));
+            //    finish();
             }
         });
+    }
+
+    public void IngresarPoesia(View view){
+
+        startActivity(new Intent(SplashActivity.this,MenuActivity.class));
+        finish();
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_marginBottom="5dp"
+    android:layout_marginBottom="0dp"
     android:paddingBottom="5dp"
     android:background="@drawable/fondo_menu"
     >
@@ -63,45 +63,7 @@
         android:background="@drawable/boton_creditos"
         android:gravity="center_horizontal"
         android:onClick="ShowActivity" />
-    <!--
-        <selector xmlns:android="http://schemas.android.com/apk/res/android">
-            <item android:drawable="@drawable/botontex1" android:state_pressed="true">
-                <item android:drawable="@drawable/botontex2" android:state_pressed="false">
-                </item></item></selector>
 
-
-            <Button
-                android:layout_width="50px"
-                android:layout_height="20px"
-                android:background="@drawable/texto"
-                />
-
-            <Button
-                android:layout_width="50px"
-                android:layout_height="20px"
-                android:background="@drawable/favoritos"
-                />
-
-
-            <Button
-                android:layout_width="50px"
-                android:layout_height="20px"
-                android:background="@drawable/autores"
-                />
-
-
-            <Button
-                android:layout_width="50px"
-                android:layout_height="20px"
-                android:background="@drawable/creditos"
-                />
-
-
-
-
-
-
-        -->
 
 
 

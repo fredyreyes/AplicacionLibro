@@ -3,6 +3,4 @@
 
     <item android:drawable="@drawable/botontex" android:state_pressed="false"></item>
     <item android:drawable="@drawable/botontex_pulsed" android:state_pressed="true"></item>
-
-
 </selector>

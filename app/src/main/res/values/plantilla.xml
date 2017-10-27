@@ -632,7 +632,10 @@
         <item>@drawable/autores1</item>
         <item>@drawable/autores2</item>
         <item>@drawable/autores3</item>
-        <item>@drawable/autore4</item>
+        <item>@drawable/ultimoautor</item>
+
+        <item>@drawable/autores1</item>
+
 
    </string-array>
 
