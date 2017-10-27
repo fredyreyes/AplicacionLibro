@@ -26,8 +26,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-//TE AMO JOHAN!!
-//JOHANN POLANA GONZALEZ
 public class MainActivity extends AppCompatActivity {
 
 int resourceId;
