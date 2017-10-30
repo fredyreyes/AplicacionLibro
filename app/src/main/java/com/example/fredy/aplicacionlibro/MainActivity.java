@@ -157,7 +157,7 @@ int resourceId;
                          nuevoRegistro.put("idImageShare",String.valueOf(idImageShare));
                          dbFavorites.insert("Favoritos", null, nuevoRegistro);
 
-                         Toast.makeText(MainActivity.this," Has guardado este exto en Favoritos: ",Toast.LENGTH_SHORT).show();
+                         Toast.makeText(MainActivity.this," Has guardado este texto en Favoritos: ",Toast.LENGTH_SHORT).show();
 
 
                      }
